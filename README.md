@@ -1,15 +1,15 @@
 ## hdbresaleapi
 API that takes in your posts and predicts a price with the trained random forest regressor model
 
-## usage
+### usage
 either 
 1. install locally and run with the command- uvicorn mlapi:app, connect with Postman to the API on port 8000
 2. use hosted url https://hdbresaleapi.herokuapp.com/
 
-## HTTP verbs | endpoints
+### HTTP verbs | endpoints
 POST | /
 
-## post request example
+### post request example
 
 {
     "flat_type":5,
