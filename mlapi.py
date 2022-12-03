@@ -40,12 +40,12 @@ async def scoring_endpoint(item: ScoringItem):
        'town_YISHUN', 'sale_date']
 
     for i in town_list:
-         if town_select in i:
+         if town_select == i[5:]:
              t_index = town_list.index(i) - 14
              town_select_list = town_select_list[:t_index]+[1]+town_select_list[t_index+1:]
 
     user_list = [[year_select, flat_select, ordinal_date] + town_select_list]
 
-    yhat = model.predict(user_list)
+    prediction = model.predict(user_list)
 
-    return {'prediction': float(yhat)}
+    return {'prediction': float(prediction)}
